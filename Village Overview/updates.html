@@ -1,0 +1,27 @@
+ <html>
+<body>
+<marquee style="background-color:rgba(0.31,42,205,0.2);"><h3>Updates long lasts for 24 hours...</h3></marquee>
+<input type="button" onclick="fun()" style="color:white;background-color:rgb(50,30,40);" value="Enter new update"/>
+&emsp;&emsp;
+<input type="button" value="Remove update" style="color:white;background-color:rgb(30,30,100);"onclick="funct()"/>
+
+<h1>Trending News<h1></body><script>
+function fun(){
+var p=document.createElement("li");
+
+var x=prompt("Enter new update");
+var q=document.createTextNode(x);
+p.appendChild(q);
+document.body.appendChild(p);
+}
+</script>
+
+
+<script>
+function funct(){
+var i=parseInt(prompt("Numbering order starts from 0")); 
+var a=document.getElementsByTagName("li")[i];
+a.remove();
+}
+</script>
+</html>

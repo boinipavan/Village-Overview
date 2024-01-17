@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<table>
+<tr>
+<td><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></td>
+<td><input type="button" onClick="fun()" value="ADD description"></td>
+</tr></table>
+<label for="file" style="cursor: pointer;background-color:rgb(47,99,110);">click here to Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+<script>
+function fun()
+{
+var x=document.createElement("h3");
+var t=prompt("enter description");
+var y=document.createTextNode(t);
+x.appendChild(y);
+document.body.appendChild(x);
+}
+</script>
+</body>
+</html>

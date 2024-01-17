@@ -1,0 +1,63 @@
+<html>
+<body bgcolor="blue" style="background-color:rgba(28,99,71,0.5);border="5";margin-left:100;margin-right:30;">
+<input type="button" value="Enter new contact" onclick="fun1()"/>
+
+
+
+<button onclick="myFunction()">Edit contact</button>
+
+<button onclick="funct()">Remove contact</button>
+<h2> &emsp;Contacts</h2><ol type="1" id="myList">
+
+<li><h3>Gramapanchayat Office:9899989898</h3></li>
+<li><h3>Sarpanch:9899989898</h3></li>
+<li><h3>Deputy-Sarpanch:9899989899</h3></li>
+<li><h3>PS(C.I):9899980008</h3></li>
+<li><h3>PS(S.I):9899989898</h3></li>
+<li><h3>Lineman(Electricity):9899989898</h3></li>
+<li><h3>M.R.O:9899989898</h3></li>
+<li><h3>V.R.O:9899989898</h3></li>
+<li><h3>A.O:9899989898</h3></li>
+
+
+</ol>
+<script>
+function myFunction() {
+// Select first child element:
+var i=parseInt(prompt("Numbering order starts from 0")); 
+const element = document.getElementById("myList").children[i];
+
+// Create a new text node:
+var x=prompt("enter new data");
+const newNode = document.createTextNode(x);
+
+// Replace the text node:
+element.replaceChild(newNode, element.childNodes[0]);
+}
+</script>
+
+<script>
+
+function fun1(){
+
+var p=document.createElement("li");
+
+var x=prompt("Enter new contact");
+var q=document.createTextNode(x);
+p.appendChild(q);
+document.body.appendChild(p);
+}
+</script>
+
+
+<script>
+function funct(){
+var i=parseInt(prompt("Numbering order starts from 0")); 
+var a=document.getElementsByTagName("li")[i];
+a.remove();
+}
+</script>
+
+</body>
+
+</html>

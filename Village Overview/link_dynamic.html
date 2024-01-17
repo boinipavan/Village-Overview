@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src=
+"https://code.jquery.com/jquery-2.1.1.min.js">
+		</script>
+		<title>Set href attribute at runtime</title>
+		<style>
+			#btn {
+				background-color: #4caf50;
+				color: white;
+			}
+			input {
+				color: #4caf50;
+			}
+			a {
+				color: #4caf50;
+			}
+			h1 {
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>GeeksforGeeks</h1>
+			<b>Set href attribute at runtime</b>
+			<br>
+			<input type="text" name="url" />
+			<button id="btn">Set href</button>
+			<button>
+				<a id="click" href="#"
+				target="_blank">
+					link
+				</a>
+		</button>
+		</center>
+	</body>
+
+	<script>
+		$(document).ready(function () {
+			$("#btn").click(function () {
+				$("#click").attr("href",
+				$('input[name$="url"]').val());
+			});
+		});
+	</script>
+</html>

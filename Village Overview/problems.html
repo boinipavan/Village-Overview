@@ -1,0 +1,25 @@
+ <html>
+<body>
+<input type="button" onclick="fun()"  style="color:white;background-color:rgb(47,99,110);border-radius:6px;"  value="Click here to enter your problem"/>
+&emsp;
+<input type="button"  style="color:white;background-color:rgb(0,83,54);border-radius:4px;" value="Click here to remove problem " onclick="funct()"/>
+<h1>Major problems<h1></body><script>
+function fun(){
+var p=document.createElement("li");
+
+var x=prompt("Enter your problem");
+var q=document.createTextNode(x);
+p.appendChild(q);
+document.body.appendChild(p);
+}
+</script>
+
+
+<script>
+function funct(){
+var i=parseInt(prompt("Numbering order starts from 0")); 
+var a=document.getElementsByTagName("li")[i];
+a.remove();
+}
+</script>
+</html>

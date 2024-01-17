@@ -1,0 +1,47 @@
+<html>
+<body>
+<form action="C:\Users\boini\OneDrive\Desktop\wt\assingment.html" onsubmit="return validate();">
+enter name:<input type="text" id="name" required/>
+<label id="label1" style="visibility:hidden;">invalid</label>
+</br>
+enter password:<input type="password" id="pd"/>
+<label id="label2" style="visibility:hidden;">invalid</label>
+</br><input type="submit">
+</form>
+<script>
+function validate(){
+var x=document.getElementById("name");
+var y=document.getElementById("pd");
+if(x.value.trim()=="")
+{
+alert("name is not entered");
+document.getElementById("label1").style.visibility="visible";
+document.getElementById("name").style.border="solid 3px red";
+return false;
+}
+else if(y.value.trim()=="")
+{
+alert("passwd is not entered");
+document.getElementById("label2").style.visibility="visible";
+document.getElementById("pd").style.border="solid 3px red";
+return false;
+}
+else if(x.value.trim().length<5)
+{
+alert("name short");
+document.getElementById("label1").style.visibility="visible";
+document.getElementById("name").style.border="solid 3px red";
+return false;
+}
+else if(y.value.trim().length<5)
+{
+alert("pd short");
+document.getElementById("label2").style.visibility="visible";
+document.getElementById("pd").style.border="solid 3px red";
+return false;
+}
+else{
+return true;}
+}</script>
+</body> 
+</html>
